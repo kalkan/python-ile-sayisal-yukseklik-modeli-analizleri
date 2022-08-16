@@ -1,11 +1,11 @@
 # python-ile-mekansal-raster-isleme-atolyesi
 Python ile mekansal raster görüntü işleme atölyesi
 
-* Raster veri okuma
+* Raster veri okuma (tamam)
 * Bant okuma
 * NDVI heasplama
-* Zonal statistics
-* Veri yazma
+* Zonal statistics (tamam)
+* Veri yazma (tamam)
 
 
 https://geographicdata.science/book/notebooks/03_spatial_data.html
