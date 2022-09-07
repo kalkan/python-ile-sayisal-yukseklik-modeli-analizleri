@@ -1,13 +1,12 @@
 # python-ile-mekansal-raster-isleme-atolyesi
 Python ile mekansal raster görüntü işleme atölyesi
 
-* Raster veri okuma (tamam)
+Kullanılan kütüphaneler: contextily, rasterio, geopandas, rasterstats
+
+* Raster veri okuma 
 * Bant okuma
-* NDVI heasplama
-* Zonal statistics (tamam)
-* Veri yazma (tamam)
+* NDVI heasplama ve görselleştirme
+* Zonal statistics
+* Veri yazma 
+* Vektör ile raster kesme (geojson)
 
-
-https://geographicdata.science/book/notebooks/03_spatial_data.html
-
-https://colab.research.google.com/drive/1ygQx2fpqBa7yQAAG5-VJckVqNnEBWrJV
