@@ -1,8 +1,10 @@
-# Python ile mekansal raster görüntü işleme atölyesi
+# Python ile Mekansal Raster Görüntü İşleme Atölyesi
 
 Kullanılan kütüphaneler: contextily, rasterio, geopandas, rasterstats
 
-* Raster veri okuma 
+## Ana Başlıklar
+
+* Raster veri okuma (SRTM)
 * Bant okuma
 * NDVI heasplama ve görselleştirme
 * Zonal statistics
