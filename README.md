@@ -2,6 +2,8 @@
 
 Kullanılan kütüphaneler: contextily, rasterio, geopandas, rasterstats
 
+Bu atölyede 2 farklı notebook dosyasında Sentinel-2 ve SRTM raster verileri işlenerek bazı temel analizler gerçekleştirilecektir. 
+
 ## Ana Başlıklar
 
 * Raster veri okuma (SRTM)
