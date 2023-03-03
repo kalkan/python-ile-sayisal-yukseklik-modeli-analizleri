@@ -26,7 +26,15 @@ ilceler.plot()
 
 * İstanbul, Bursa ve Kocaeli illerini seçelim
 
+```
+secileniller = ilceler[(ilceler['NAME_1'] == 'Istanbul') | (ilceler['NAME_1'] == 'Bursa') | (ilceler['NAME_1'] == 'Kocaeli')]
+```
+
 * Bursa'nın, Karamürsel, Orhangazi ve İznik ilçelerini seçelim.
+
+```
+bursailceler = ilceler[(ilceler['NAME_2'] == 'Karamürsel') | (ilceler['NAME_2'] == 'Orhangazi') | (ilceler['NAME_2'] == 'İznik')]
+```
 
 ## Ana Başlıklar
 
