@@ -1,4 +1,4 @@
-# Python ile Mekansal Raster Görüntü İşleme Atölyesi
+# Python ile Sayısal Yükseklik Modeli Analizleri
 
 Kullanılan kütüphaneler: rasterio, geopandas, rasterstats
 
