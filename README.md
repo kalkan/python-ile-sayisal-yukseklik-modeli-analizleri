@@ -16,7 +16,7 @@ Bu atölyede 2 farklı notebook dosyasında Sentinel-2 ve SRTM raster verileri i
 * Level-2 Türkiye GeoJSON Verisi: https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_TUR_2.json.zip
 
 * İndirdiğimiz ilçe verilerini okuyup görselleştirelim.
-* 
+
 ```
 # read turkey level-2 geojson
 ilceler = gpd.read_file('gadm41_TUR_2.json')
@@ -24,7 +24,9 @@ ilceler.plot()
 ```
 ![image](https://user-images.githubusercontent.com/3392893/222678591-ee60052e-65e3-45e1-b73e-b04ca8222e45.png)
 
+* İstanbul, Bursa ve Kocaeli illerini seçelim
 
+* Bursa'nın, Karamürsel, Orhangazi ve İznik ilçelerini seçelim.
 
 ## Ana Başlıklar
 
