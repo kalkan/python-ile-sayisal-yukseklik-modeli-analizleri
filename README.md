@@ -4,6 +4,10 @@ Kullanılan kütüphaneler: contextily, rasterio, geopandas, rasterstats
 
 Bu atölyede 2 farklı notebook dosyasında Sentinel-2 ve SRTM raster verileri işlenerek bazı temel analizler gerçekleştirilecektir. 
 
+## 1. Uygulama: SRTM Sayısal Yükseklik Verisi Okuma ve Bölgesel İstatistik
+
+
+
 ## Ana Başlıklar
 
 * Raster veri okuma (SRTM)
