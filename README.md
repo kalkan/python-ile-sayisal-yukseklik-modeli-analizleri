@@ -58,6 +58,32 @@ secileniller.plot(facecolor="none", edgecolor="#F93822", zorder=1, ax=ax)
 
 ![image](https://user-images.githubusercontent.com/3392893/222686520-8bba439e-4626-44e4-a95d-b3dc19598072.png)
 
+* Seçtiğimiz Bursa ilçeleri için görüntüyü kesmeden önce bir kere daha görselleştirelim.
+
+```
+r = rasterio.open("n40e029.hgt")
+
+f, ax = plt.subplots(1, figsize=(9, 9))
+ax = rioshow(r, alpha=0.5, zorder=2, ax=ax)
+cx.add_basemap(ax, crs=r.crs) 
+bursailceler.plot(facecolor="none", edgecolor="#F93822", zorder=1, ax=ax)
+```
+![image](https://user-images.githubusercontent.com/3392893/222706360-fb5e058b-65ca-4aca-9cd5-10d2af8b72ba.png)
+
+* Şimdi bölgesel istatistik hesabı için rasterstats kütüphanesinden zonal_stats fonksiyonu ile ilçelerimiz için min, max, median gibi değerleri hesaplayalım. 
+```
+from rasterstats import zonal_stats
+
+elevations2 = zonal_stats(bursailceler, 'n40e029.hgt',  stats="count min mean max median")
+elevations2 = pandas.DataFrame(elevations2)
+```
+![image](https://user-images.githubusercontent.com/3392893/222713290-78ab5ce1-877a-49b9-8a89-c64e74cdf0de.png)
+
+* Son aşamada sayısal yükseklik verisini bu ilçe sınırlarına göre keserek bir bir .tif uzantılı dosya üreteceğiz. 
+
+** Bunun için öncelikle ilçeler verimizi geojson olarak kaydedelim.
+
+
 
 ## Ana Başlıklar
 
