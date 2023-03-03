@@ -1,13 +1,13 @@
 # Python ile Sayısal Yükseklik Modeli Analizleri
 
+Bu atölyede SRTM raster verileri işlenerek bazı temel analizler gerçekleştirilecektir. 
+
 Kullanılan kütüphaneler: rasterio, geopandas, rasterstats
 
 * rasterio: mekansal raster veri işlemleri için
 * geopandas: mekansal veri operasyonları için
 * rasterstats: vektör geometriler ile raster verilerden istatistik çıkarmak için
 * contextily: internetten altık haritaları çekmek için
-
-Bu atölyede 2 farklı notebook dosyasında Sentinel-2 ve SRTM raster verileri işlenerek bazı temel analizler gerçekleştirilecektir. 
 
 ## 1. Uygulama: SRTM Sayısal Yükseklik Verisi Okuma ve Bölgesel İstatistik
 
