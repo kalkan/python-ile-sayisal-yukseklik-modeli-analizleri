@@ -81,7 +81,11 @@ elevations2 = pandas.DataFrame(elevations2)
 
 * Son aşamada sayısal yükseklik verisini bu ilçe sınırlarına göre keserek bir bir .tif uzantılı dosya üreteceğiz. 
 
-** Bunun için öncelikle ilçeler verimizi geojson olarak kaydedelim.
+* Bunun için öncelikle ilçeler verimizi geojson olarak kaydedelim.
+
+```
+bursailceler.to_file("bursa.geojson", driver="GeoJSON")
+```
 
 
 
