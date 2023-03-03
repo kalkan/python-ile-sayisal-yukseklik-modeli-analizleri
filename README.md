@@ -5,6 +5,7 @@ Kullanılan kütüphaneler: rasterio, geopandas, rasterstats
 * rasterio: mekansal raster veri işlemleri için
 * geopandas: mekansal veri operasyonları için
 * rasterstats: vektör geometriler ile raster verilerden istatistik çıkarmak için
+* contextily: internetten altık haritaları çekmek için
 
 Bu atölyede 2 farklı notebook dosyasında Sentinel-2 ve SRTM raster verileri işlenerek bazı temel analizler gerçekleştirilecektir. 
 
@@ -35,6 +36,28 @@ secileniller = ilceler[(ilceler['NAME_1'] == 'Istanbul') | (ilceler['NAME_1'] ==
 ```
 bursailceler = ilceler[(ilceler['NAME_2'] == 'Karamürsel') | (ilceler['NAME_2'] == 'Orhangazi') | (ilceler['NAME_2'] == 'İznik')]
 ```
+
+* Seçilen ilçeleri çizdirelim. Bu ilçelere göre sayısal yükseklik modelimizi keseceğiz.
+
+```
+bursailceler.plot()
+```
+
+![image](https://user-images.githubusercontent.com/3392893/222681732-750aa630-a71e-4aa8-ad88-2ba469d29707.png)
+
+* Şimdi sayısal yükseklik modeli verimizi öncelikle rasterio ile okuyup, rioshow ile gösterip, contextily'dan alacağımız arkaplan harita ile sunalım. Üzerine'de seçtiğimiz illerin katmanı nı ekleyelim. 
+
+```
+r = rasterio.open("n40e029.hgt")
+
+f, ax = plt.subplots(1, figsize=(9, 9))
+ax = rioshow(r, alpha=0.5, zorder=2, ax=ax)
+cx.add_basemap(ax, crs=r.crs) 
+secileniller.plot(facecolor="none", edgecolor="#F93822", zorder=1, ax=ax)
+```
+
+![image](https://user-images.githubusercontent.com/3392893/222686520-8bba439e-4626-44e4-a95d-b3dc19598072.png)
+
 
 ## Ana Başlıklar
 
