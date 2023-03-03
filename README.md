@@ -87,14 +87,24 @@ elevations2 = pandas.DataFrame(elevations2)
 bursailceler.to_file("bursa.geojson", driver="GeoJSON")
 ```
 
+* rio mask komutu ile görüntümüzü bu vektör dosya sınırına göre keserek yeni bir dosya yazdıralım.
+```
+! rio mask n40e029.hgt \
+           bursa.tif \
+           --crop \
+           --geojson-mask\
+           bursa.geojson
+```
+
+* Sonrasında görselleştirelim.
+
+```
+f, ax = plt.subplots(1, figsize=(9, 9))
+r = rasterio.open("bursa.tif")
+rioshow(r, zorder=1, alpha=0.75, ax=ax)
+cx.add_basemap(ax, alpha=0.5, crs=r.crs)
+```
+![image](https://user-images.githubusercontent.com/3392893/222715142-e45ba79b-f86d-4230-9774-8821bb067f4e.png)
 
 
-## Ana Başlıklar
-
-* Raster veri okuma (SRTM)
-* Bant okuma
-* NDVI heasplama ve görselleştirme
-* Zonal statistics
-* Veri yazma 
-* Vektör ile raster kesme (geojson)
 
